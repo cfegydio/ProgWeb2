@@ -43,7 +43,7 @@
         lista = document.querySelector('ol');
         topicos.forEach(topico => {
             const item = document.createElement('li');
-            item.textContent = topico;
+            item.innerHTML = '<a href=#" ' + topico + ' ">' + topico + '</a>';
             lista.append(item);
         });
     </script>
