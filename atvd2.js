@@ -1,11 +1,11 @@
-        const subtitulos = document.querySelectorAll('h2');   
+        const subtitulos = document.querySelectorAll('h2');
         const topicos = new Array();
         subtitulos.forEach(subtitulo => {
             topicos.push(subtitulo.textContent);
         });
-        lista = document.querySelector('ol');
+        const lista = document.querySelector('ol');
         topicos.forEach(topico => {
             const item = document.createElement('li');
-            item.textContent = topico;
+            item.innerHTML = '<a href="#' + topico + '">' + topico + '</a>';
             lista.append(item);
         });
