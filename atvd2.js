@@ -2,7 +2,7 @@
         const topicos = new Array();
         subtitulos.forEach(subtitulo => {
             topicos.push(subtitulo.textContent);
-            subtitulo.innerHTML = `${subtitulo.textContent} <a href='#'>início</a>`;
+            subtitulo.innerHTML = `${subtitulo.textContent} <a href='#'> Retornar </a>`;
        
         });
         const lista = document.querySelector('ol');
