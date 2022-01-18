@@ -1,8 +1,7 @@
 const tamanhoCelula = 40;
 document.body.append(tabuleiro());
 
-
-function peças(cor) {
+function criarPecas(cor) {
     let imagem = document.createElement('img');
     imagem.setAttribute('src', `img/${cor}.png`);
     imagem.setAttribute('width', `${tamanhoCelula-4}px`);
@@ -34,7 +33,6 @@ containers.forEach(container => {
         container.appendChild(draggable);
     });
 });
-
 
 function tabuleiro() {
     const tamanho = 8;
