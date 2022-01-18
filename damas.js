@@ -1,6 +1,11 @@
 const tamanhoCelula = 40;
 document.body.append(criarTabuleiro());
 
+    tabela.style.borderStyle = 'solid';
+    tabela.style.borderSpacing = 0;
+    tabela.style.margin = 'auto';
+    tabela.style.borderColor = 'black';
+
 function criarTabuleiro() {
     const tamanho = 8;
     let tabela = document.createElement('table');
