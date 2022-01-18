@@ -1,7 +1,7 @@
 const tamanhoCelula = 40;
-document.body.append(criarTabuleiro());
+document.body.append(tabuleiro());
 
-function criarTabuleiro() {
+function tabuleiro() {
     const tamanho = 8;
     let tabela = document.createElement('table');
 
@@ -22,9 +22,9 @@ for (let i = 0; i < tamanho; i++) {
                 celula.style.backgroundColor = '#FA8072';
                 celula.classList.add("container");
                 if (i * 8 + j <= 24) {
-                    celula.append(criaPeca('black'));
+                    celula.append(peca('black'));
                 } else if (i * 8 + j >= 40) {
-                    celula.append(criaPeca('red'));
+                    celula.append(peca('red'));
                 }
             } else {
                 celula.style.backgroundColor = 'white';
@@ -35,7 +35,7 @@ for (let i = 0; i < tamanho; i++) {
 }
 
 
-function criaPeca(cor) {
+function peca(cor) {
     let imagem = document.createElement('img');
     imagem.setAttribute('src', `img/${cor}.png`);
     imagem.setAttribute('width', `${tamanhoCelula-4}px`);
