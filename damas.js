@@ -5,11 +5,6 @@ function criarTabuleiro() {
     const tamanho = 8;
     let tabela = document.createElement('table');
 
-    tabela.style.borderStyle = 'solid';
-    tabela.style.borderSpacing = 0;
-    tabela.style.margin = 'auto';
-    tabela.style.borderColor = 'black';
-
     for (let i = 0; i < tamanho; i++) {
         let linha = document.createElement('tr');
         tabela.append(linha);
