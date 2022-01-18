@@ -44,6 +44,16 @@ function criaPeca(cor) {
     return imagem;
 }
 
+containers.forEach(container => {
+    container.addEventListener("dragover", e => {
+        e.preventDefault();
+    });
+    container.addEventListener("drop", () => {
+        const draggable = document.querySelector(".dragging");
+        container.appendChild(draggable);
+    });
+});
+
 const draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
 
@@ -54,15 +64,5 @@ draggables.forEach(draggable => {
     });
     draggable.addEventListener("dragend", () => {
         draggable.classList.remove("dragging");
-    });
-});
-
-containers.forEach(container => {
-    container.addEventListener("dragover", e => {
-        e.preventDefault();
-    });
-    container.addEventListener("drop", () => {
-        const draggable = document.querySelector(".dragging");
-        container.appendChild(draggable);
     });
 });
