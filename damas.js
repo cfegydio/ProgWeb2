@@ -22,9 +22,9 @@ function criarTabuleiro() {
                 celula.style.backgroundColor = '#00BECC';
                 celula.classList.add("container");
                 if (i * 8 + j <= 24) {
-                    celula.append(criaPeca('black'));
+                    celula.append(criaPeca('peça1'));
                 } else if (i * 8 + j >= 40) {
-                    celula.append(criaPeca('red'));
+                    celula.append(criaPeca('peça2'));
                 }
             } else {
                 celula.style.backgroundColor = 'white';
